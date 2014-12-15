@@ -1,0 +1,16 @@
+/* CSS File for ePub */
+.page {
+  width: 90%;
+  margin: 0 auto;
+}
+.sup {
+  font:bold;
+  line-height:5px;
+  font-size:80%;
+  float:left;
+  font-family: Geneva, Helvetica, sans-serif;
+}
+
+.paragraph {
+  font-family: Geneva, Helvetica, sans-serif;
+}

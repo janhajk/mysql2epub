@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+    <package version="2.0" xmlns="http://www.idpf.org/2007/opf"
+             unique-identifier="BookId">
+     <metadata xmlns:dc="http://purl.org/dc/elements/1.1/"
+               xmlns:opf="http://www.idpf.org/2007/opf">
+       <dc:title>%booktitle% - %booksubtitle%</dc:title>
+       <dc:creator opf:role="aut">%bookauthor%</dc:creator>
+       <dc:language>%booklanguage%</dc:language>
+       <dc:rights>Public Domain</dc:rights>
+       <dc:publisher>%bookpublisher%</dc:publisher>
+       <dc:identifier id="BookId">urn:uuid:%bookid%</dc:identifier>
+       <meta name="cover" content="cover-image" />
+     </metadata>
+     <manifest>
+      <item id="ncx"         href="toc.ncx" media-type="application/x-dtbncx+xml" />
+      <item id="style"       href="stylesheet.css"   media-type="text/css" />
+      <item id="titlepage"   href="title_page.xhtml" media-type="application/xhtml+xml" />
+      <item id="cover"       href="cover.xhtml"      media-type="application/xhtml+xml"/>
+      <item id="cover-image" href="images/cover.png" media-type="image/png"/>
+      %chapters%
+     </manifest>
+     <spine toc="ncx">
+      <itemref idref = "cover" linear="no" />
+      <itemref idref = "titlepage" />
+      %spines%
+     </spine>
+     <guide>
+        <reference href="cover.xhtml" type="cover" title="Cover"/>
+     </guide>
+    </package>
